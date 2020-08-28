@@ -1,4 +1,4 @@
 functions:
-  - name: hello-world-python
+  - name: function-hello-world-python
     runtime: python3
     handler: hello_world.handler
