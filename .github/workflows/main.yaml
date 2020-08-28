@@ -25,7 +25,7 @@ jobs:
   build:
     needs: test
     runs-on: ubuntu-latest
-    if: github.repository_owner == "koyeb-community"
+    if: github.repository_owner == 'koyeb-community'
     env:
       SCRIPT_DIR: /var/builder
     steps:
