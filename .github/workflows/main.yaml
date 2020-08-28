@@ -50,11 +50,6 @@ jobs:
       - run: git clone git://github.com/koyeb-community/builder $SCRIPT_DIR
       - run: make -f $SCRIPT_DIR/builder.mk build NAME=$NAME
       - run: make -f $SCRIPT_DIR/builder.mk publish TAGS="$RELEASE_VERSION" TAGS+="$RELEASE_MAJOR" TAGS+="$RELEASE_MINOR" NAME=$NAME
-      - name: push README to Dockerhub
-        uses: christian-korneck/update-container-description-action@v1
         env:
-          DOCKER_USER: ${{ secrets.DOCKER_USERNAME }}
-          DOCKER_PASS: ${{ secrets.DOCKER_PASSWORD }}
-        with:
-          destination_container_repo: koyeb/${{ env.NAME }}
-          provider: dockerhub
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
