@@ -37,7 +37,7 @@ jobs:
         run: |
           release=${GITHUB_REF#refs/*/}
           major=$(echo $release | awk -F \. {'print $1'})
-          minor=$(echo $release | awk -F \. {'print $1.$2'})
+          minor=$(echo $release | awk -F \. {'print $1 "." $2'})
           echo ::set-env name=RELEASE_VERSION::$release
           echo ::set-env name=RELEASE_MAJOR::$major
           echo ::set-env name=RELEASE_MINOR::$minor
