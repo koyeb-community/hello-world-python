@@ -34,7 +34,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: chrisdickinson/setup-yq@v1.0.0
-      - uses: koyeb-community/builder
+      - uses: koyeb-community/builder@master
         with:
           docker_username: ${{ secrets.DOCKER_USERNAME }}
           docker_password: ${{ secrets.DOCKER_PASSWORD }}
