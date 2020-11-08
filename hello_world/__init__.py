@@ -1,5 +1,3 @@
-import requests
-
 def handler(event, context):
     print("Got data", event)
     print("Got context", context)
